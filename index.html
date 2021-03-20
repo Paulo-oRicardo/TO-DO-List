@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="./style/style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+   <!--Icones--><script src="https://kit.fontawesome.com/6dc60f8408.js" crossorigin="anonymous"></script>
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,700;1,400&display=swap" rel="stylesheet">
+   <title>Todo app</title>
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+</head>
+<body>
+  <header data-header >
+    <section class="todo-img">
+    <h1>T O D O</h1>
+    <button  class="button-light" data-button-light></button>
+    </section>
+    <!-- FAZER O CHECK ANTES DE DAR CLEAR ALL -->
+    <section class="input-inicio">
+  
+    <input type="text" class="inserir inserir-dark" data-input-todo placeholder="&#xf111;">
+    <button data-button-inicio class="button-inicio"><i class="fas fa-pen"></i></button>
+    </section>
+
+  </header>
+  <main data-meio class="meio-light">
+   <ul data-ul class="ul">
+   
+   </ul>
+  
+   <li class="mobile mobile-dark">
+     <button id="all">All</button>
+     <button id="active">Active</button>
+     <button id="complete">Complete</button>
+   </li>
+  </main>
+
+
+  <script src="./js/jquery-3.6.0.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+
+$(document).ready(function(){
+         $("[data-ul]").sortable({update: function(){ 
+           let ordem = $(this).sortable("serialize");  
+         }
+       })
+   });
+
+    </script>
+ 
+  <script src="./js/light.js"></script>
+  <script src="./js/script.js"></script>
+
+</body>
+</html>
